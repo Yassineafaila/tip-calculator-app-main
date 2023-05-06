@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-clr: hsl(172, 67%, 45%);
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);/*backgroundColor*/
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    --fw-semiBold:700;
+}
+body{
+    max-width: 100%;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    display: grid;
+    min-height: 100vh;
+    padding: 2rem 0;
+    place-items: center;
+}
+.Tip{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.Tip .main-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 1.8rem;
+}
+.main-heading h1 img{
+    max-width: 100%;
+    display: block;
+}
+.container{
+    max-width: 100%;
+    background-color: var(--White);
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    padding: 1.3rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* height: calc(100% - 54px); */
+}
+.container .form{
+    padding: 1rem 0.5rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .form .Bill{
+    max-width: 100%;
+}
+.container .form  .Bill label{
+    color: var(--Dark-grayish-cyan);
+    font-weight: var(--fw-semiBold);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.container .form  .Bill div{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+    /* gap: 0.9375rem; */
+    padding: 0.9rem;
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    -ms-border-radius: 0.3125rem;
+    -o-border-radius: 0.3125rem;
+}
+.form .Bill div svg{
+    display: block;
+    max-width: 100%;
+}
+.form .Bill div input[type="text"]{
+    flex: 1;
+    text-align: right;
+    border: none;
+    outline-color: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: var(--Very-dark-cyan);
+    font-weight: var(--fw-semiBold);
+    caret-color: var(--Dark-grayish-cyan);
+}
+.form .Bill div input[type="text"]:is(:focus,:hover){
+    border: none;
+    outline: transparent;
+} 
+.form .Tips{
+    max-width: 100%;
+}
+.form .Tips label{
+    color: var(--Dark-grayish-cyan);
+    font-weight: var(--fw-semiBold);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.form .Tips div {
+    display: grid;
+    grid-template-columns:150px 150px;
+    grid-gap: 10px;
+    margin-top: 1.25rem;
+}
+.form .Tips div button
+{
+    padding: 0.8rem 1rem;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    font-weight: var(--fw-semiBold);
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 1.5rem;
+    transition: .3s all ease;
+    cursor: pointer;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+}
+.form .Tips div input[type='text']{
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    outline: transparent;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: var(--fw-semiBold);
+    text-align: right;
+    font-size: 1rem;
+    color: var(--Very-dark-cyan);
+}
+.form .Tips div input[type='text']::placeholder{
+    color: var(--Dark-grayish-cyan);
+    font-size: 24px;
+    text-align: right;
+    padding: 0.8rem 0;
+    font-weight: var(--fw-semiBold);
+}
+.form .Tips div input[type='text']:is(:hover,:focus){
+    border: 2px solid var(--primary-clr);
+}
+.form .Tips div button:hover{
+    background-color: var(--primary-clr);
+    color: var(--Very-dark-cyan);
+}
+.form .Tips div button.selected{
+    background-color: var(--primary-clr);
+}
+.form .People{
+    max-width: 100%;
+    margin-top: 1.2rem;
+}
+.form .People .labels{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.form .People .labels label:first-child{
+    color: var(--Dark-grayish-cyan);
+    font-weight: var(--fw-semiBold);
+}
+.form .People .labels label:last-child{
+    font-weight: var(--fw-semiBold);
+    color: red;
+    display: none;
+}
+.form .People div:last-child{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+    /* gap: 0.9375rem; */
+    padding: 0.9rem;
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    -ms-border-radius: 0.3125rem;
+    -o-border-radius: 0.3125rem;
+}
+.form .People div:last-child input[type='text']{
+    flex: 1;
+    text-align: right;
+    border: none;
+    outline-color: transparent  ;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: var(--Very-dark-cyan);
+    font-weight: var(--fw-semiBold);
+    caret-color: var(--Dark-grayish-cyan);
+}
+.form .People div:last-child input[type='text']:is(:hover,:focus){
+    outline: transparent;
+    border: none;
+}
+.result{
+    background-color: var(--Very-dark-cyan);
+    padding: 1.4rem 1.4rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.result .Tip-Amount,
+.result .Total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.result .Tip-Amount div,
+.result .Total div{
+    display: flex;
+    flex-direction: column;
+}
+.result .Tip-Amount div span:first-child,
+.result .Total div span:first-child{
+    color: var(--White);
+    font-weight: var(--fw-semiBold);
+}
+.result .Tip-Amount div span:last-child,
+.result .Total div span:last-child{
+    color: var(--Grayish-cyan);
+    font-weight: var(--fw-semiBold);
+    margin-top: 0.3rem;
+}
+.result .Tip-Amount .amount,
+.result .Total .total{
+    color: var(--primary-clr);
+    font-size: 1.5rem;
+    font-weight: var(--fw-semiBold);
+}
+.result button{
+    padding: 0.8rem 1rem;
+    color: var(--Very-dark-cyan);
+    font-weight: var(--fw-semiBold);
+    font-size: 1.2rem;
+    background-color: var(--primary-clr);
+    border: none;
+    outline: transparent;
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    -ms-border-radius: 0.3125rem;
+    -o-border-radius: 0.3125rem;
+    transition: .3s all ease ;
+    -webkit-transition: .3s all ease ;
+    -moz-transition: .3s all ease ;
+    -ms-transition: .3s all ease ;
+    -o-transition: .3s all ease ;
+}
+.result button:hover{
+    background-color: var(--Light-grayish-cyan);
+}
+@media screen and (min-width:375px) and (max-width:768px){
+    .Tip{
+        max-width: 400px;
+    }
+}
+@media screen and (min-width:769px) {
+    .Tip{
+        max-width: 100% ;
+        gap: 40px;
+    }
+    .container{
+        border-bottom-left-radius:15px ;
+        border-bottom-right-radius:15px ;
+        padding: 1.4rem 1.4rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px   ;
+    }
+    .form .Tips div button:hover{
+        background-color: var(--Light-grayish-cyan);
+    }
+    .result{
+        padding-block: 3rem ;
+    }
+    .result .Tip-Amount,
+    .result .Total{
+        gap: 90px;
+    }
+    .result .Tip-Amount .amount,
+    .result .Total .total{
+        color: var(--primary-clr);
+        font-size: 2.8rem;
+    }
+}
